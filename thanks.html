@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="csss/thanks.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="Refresh" content="3; http://studioadd.ru/activemoney-final/">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>спасибо</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/fos.css">
+<script type="text/javascript">
+	var sec=3;
+	 function Sec()
+	 {
+	
+	  document.getElementById("sec").innerHTML=sec;
+	   sec--;
+	   if(sec==1)
+	   {
+	   	  location.replace("http://studioadd.ru/activemoney-final/")
+	   }
+	
+	   setTimeout('Sec()',1000);
+	
+	 }
+	
+	</script>
+
+</head>
+<body>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+
+	$(document).ready(function(){
+ 	$('.close-thanks').on("click", function(){
+ 		location.replace("http://studioadd.ru/activemoney-final/")
+ 	})
+	});
+</script>
+	<section class="comtainer">
+		<div class="popup thanks">
+				<div class="thanks-title">Спасибо за заявку<br></div>
+				<div class="close-thanks">&times;</div>
+				<div class="min-title">Ваше сообщение приятно</div>
+
+
+			</div>
+</section>
+
+<script type="text/javascript">
+    Sec();
+</script>
+
+</body>
+</html>
