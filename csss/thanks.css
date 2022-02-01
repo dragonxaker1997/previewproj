@@ -1,0 +1,60 @@
+body{
+	margin: 0;
+}
+section{
+	font-family: 'Proxima Nova Rg';
+}
+.popup{
+	position: fixed;
+ left: 50%;
+ top: 150px;
+ margin-right: 0;
+ -webkit-transform: translateX(-50%);
+ transform: translateX(-50%);
+}
+.comtainer{
+	position: fixed;
+ top: 0;
+ width: 100%;
+ height: 100vh;
+ z-index: 100;
+ background: linear-gradient(to bottom left, #7b52da, #238ad5);
+ color: #fff;
+}
+.thanks{
+	font-family: 'Proxima Nova Rg';
+	text-align: center;
+	padding: 90px 70px;
+ border: 1px solid #ffffff;
+}
+.thanks-title{
+	font-family: 'Proxima Nova Rg';
+	margin-bottom: 20px;
+	font-size: 22px;
+ font-weight: 700;
+ line-height: 24px;
+ text-transform: uppercase;
+}
+.close-thanks{
+	position: absolute;
+ right: 9px;
+ top: 0px;
+ font-size: 35px;
+ color: rgba(255, 255, 255, 0.5);
+ font-weight: 300;
+ cursor: pointer;
+ color: #ffffff;
+ font-family: 'Proxima Nova';
+}
+.thanks-subtitle{
+
+	font-size: 16px;
+ font-weight: 400;
+ line-height: 21px;
+}
+
+@media (min-width: 320px) and (max-width: 991px){
+ .thanks-title{
+		font-size: 14px;
+
+ }}

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  
+    <title>active money</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <!-- анимация -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/fos.css">
+    <!-- slider -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!-- авторские стили -->
+    <link rel="stylesheet" href="css/main.css">
+				<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" ></script>
+
+
+   
+  </head>
+<body>
+	<!-- Yandex.Metrika counter --> <script> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter50827047 = new Ya.Metrika2({ id:50827047, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/50827047" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+	<header class="header">
+		<div class="container">
+			<div class="header-head">
+	<div class="header-head__logo">
+		<div class="header-head__logo-img" >
+		</div>
+		<div class="header-head__logo-text">
+			Обучаем зарабатывать и инвестировать<br>
+			на финансовых рынках с минимумом риска
+		</div>
+	</div>
+	<div class="header-head__callback">
+		<div class="header-head__callback-numbers">
+			<span class='questions'>Есть вопросы?</span>
+			<span class='phone'><a class="linkphone"  href="tel:+75351111001">+7 535 111 10 01</a></span>
+		</div>
+		<button class="header-head__callback-button button modal-open">Перезвоните мне!</button>
+	</div>
+</div>			<!-- /.header-head -->
+			<div class="header-body wow fadeIn">
+				<div class="header-body__block">
+					<div class="header-body__block-title">
+						<h1>Хотите зарабатывать?</h1>
+					</div>
+					<div class="header-body__block-subtitle">
+						На интересном и перспективном деле
+					</div>
+					<div class="header-body__block-text">
+						Мы бесплатно научим Вас как всего за 10 часов начать зарабатывать от 100 000 <br> рублей в месяц под строгим контролем профессионалов.
+					</div>
+					<button class="header-body__block-button button modal-open">Начать зарабатывать!</button>
+				</div>
+				<!-- /.header-body__block -->
+				<div class="header-body__application">
+					<div class="header-body__application-block">
+						<div class="header-body__application-block-title">
+							Оставьте заявку
+						</div>
+						<div class="header-body__application-block-subtitle">
+							Чтобы получить бесплатный пакет <br>
+							материалов о финансовом рынке
+						</div>
+						<form action="mailer/smart.php" method="POST" class="header-body__application-block-form"   >
+							<input type="text" name='user_name' class="input-name input" placeholder="Ваше имя" required>
+							<input type="text" name='user_phone' class="input-phone input" placeholder="Ваш номер телефона" required>
+							<button  type='submit' onclick="yaCounter50827047.reachGoal('callRqst',function () { }); return true;" class="header-body__application-block-form-button button">Получить материалы</button>
+						</form>
+					</div>
+				</div>
+				<!-- /.header-body__application-block -->
+			</div>
+			<!-- /.header-body -->
+			<div class="header-footer">
+				<div class="header-footer__arrow down">
+					<img src="img/arrow-down.png" alt="Стрелка вниз">
+				</div>
+			</div>
+			<!-- /.header-footer -->
+		</div>
+	</header>
+	<!-- ./header -->
+
+	<div class="modal">
+		<div class="modal-block">
+			<div class="modal-block__title">
+				Заказать звонок
+			</div>
+			<div class="modal-block__subtitle">
+				Оставьте ваши контактные данные <br>
+				и наш менеджер перезвонит вам
+			</div>
+			<div class="modal-block__thanks">
+				СПАСИБО ЗА ЗАЯВКУ
+			</div>
+			<form action="mailer/smart.php" method="POST" class="modal-block__form"  >
+				<input name='user_name' id='user_name' type="text" class="input-name input modal-block__form-input" placeholder='Ваше имя' required>
+				<input name='user_phone' type="text" class="input-phone input modal-block__form-input" placeholder='Ваш номер телефона' required>
+				<button   type='submit' onclick="yaCounter50827047.reachGoal('callRqst',function () { }); return true;"  class="button modal-block__form-button">Получить материалы</button>
+			</form>
+			<div class="modal-close">&times;</div>
+		</div>
+		<!-- /.modal-block -->
+
+	</div>
+	<!-- /.modal -->
+
+	<div class="about">
+		<div class="container">
+			<div class="about-title title">
+				О нашей компании
+			</div>
+			<!-- ./about-title -->
+			<div class="about-content">
+				<div class="about-content__descr">
+					<div class="about-content__descr-text">
+						<p>Консалтинговая компания ООО "Эдвайс Финанс" – <b>партнер российского форекс-дилера ООО «Телетрейд Групп»</b>, <br>имеющего лицензию Банка России на осуществление деятельности профессионального участника рынка ценных бумаг.</p>
+						<p><b>Наша задача</b> – обучить клиентов эффективной работе с мировыми финансовыми площадками, с помощью уникальной авторской методики. </p>
+					</div>
+					<div class="about-content__descr-imgs">
+						<div class="about-content__descr-imgs-1">
+							<img src="img/about/person1.jpg" alt="Обучение с нуля">
+							<b>Обучение с нуля</b>
+						</div>
+						<div class="about-content__descr-imgs-2">
+							<img src="img/about/person2.jpg" alt="Повышение квалификации">
+							<b>Повышение квалификации</b>
+						</div>
+					</div>
+				</div>
+				<!-- /.about-content__descr -->
+				<div class="about-content__video">
+					<iframe  class='video_iframe'  src="https://www.youtube.com/embed/QSatRRHb6TE?rel=0"   allowfullscreen></iframe>
+				</div>
+			</div>
+			<!-- ./about-content -->
+		</div>
+	</div>
+	<!-- ./about -->
+	<div class="training">
+		<div class="container">
+			<div class="train">
+				<div class="train-title title">
+					Обучение трейдеров с нуля за 0 рублей!
+				</div>
+				<div class="train-descr">
+					<p>Наша уникальная <b>бесплатная программа</b> обучения трейдеров состоит из 10-ти часовых занятий, в которых мы изучим теорию и заркепим ее практике на демо-счете.</p>
+					<p>По окончанию программы, <b>Вы будете уметь:</b></p>
+				</div>
+				<div class="train-features">
+					<div class="train-features_block">
+						<div class="train-features_block-img">
+							<img src="img/training/easy.png" alt="иконка">
+						</div>
+						<div class="train-features_block-text">
+							Вам легко будет объективно оценивать
+							финансовые рынки
+						</div>
+					</div>
+					<div class="train-features_block">
+						<div class="train-features_block-img">
+							<img src="img/training/risk.png" alt="иконка">
+						</div>
+						<div class="train-features_block-text">
+							Сможете грамотно оценивать риски
+							инвестирования в те или иные<br>
+							активы
+						</div>
+					</div>
+					<div class="train-features_block">
+						<div class="train-features_block-img">
+							<img src="img/training/graph.png" alt="иконка">
+						</div>
+						<div class="train-features_block-text">
+							Разбиратся в событиях на мировых финансовых рынках и сможете самостоятельно их
+							прогнозировать
+						</div>
+					</div>
+					<div class="train-features_block">
+						<div class="train-features_block-img">
+							<img src="img/training/analyze.png" alt="иконка">
+						</div>
+						<div class="train-features_block-text">
+							Анализировать котировки с помощью
+							специализированного ПО
+						</div>
+					</div>
+					<div class="train-features_block">
+						<div class="train-features_block-img">
+							<img src="img/training/strategy.png" alt="иконка">
+						</div>
+						<div class="train-features_block-text">
+							Составлять торговую стратегию с<br>
+							доходностью от 10% в месяц
+						</div>
+					</div>
+					<div class="train-features_block">
+						<div class="train-features_block-img">
+							<img src="img/training/news.png" alt="иконка">
+						</div>
+						<div class="train-features_block-text">
+							Получать прибыль от торговли, используя
+							аналитику и новости
+						</div>
+					</div>
+				</div>
+				<!-- /.train-features -->
+				<button class="train-button button modal-open">Получить консультацию о курсе</button>
+			</div>
+			<!-- /.train -->
+		</div>
+	</div>
+	<!-- /.training -->
+
+	<div class="advantages">
+		<div class="container">
+			<div class="advantages-container">
+				<div class="advantages-container-title title">
+					Почему стоит выбрать наше обучение?
+				</div>
+				<div class="advantages-container-blocks">
+					<div class="advantages-container-blocks-block">
+						<div class="advantages-container-blocks-block__img">
+							10
+						</div>
+						<span class='advantages-container-blocks-block__descr'>
+							10 часов индивидуального <br> обучения
+						</span>
+					</div>
+					<div class="advantages-container-blocks-block">
+						<div class="advantages-container-blocks-block__img">
+							 5
+						</div>
+						<span class='advantages-container-blocks-block__descr'>
+							Наша компания 5 лет работает <br> в обучении
+						</span>
+					</div>
+					<div class="advantages-container-blocks-block">
+						<div class="advantages-container-blocks-block__img">
+							1000
+						</div>
+						<span class='advantages-container-blocks-block__descr'>
+							Прошли более 1000 начинающих <br> трейдеров
+						</span>
+					</div>
+				</div>
+				<div  class="advantages-container-sertificate sertificate small ">
+					<img src="img/about/sertificate.jpg" alt="Сертификат">
+				</div>
+				<div class="advantages-container-text">
+					Так же по окончанию обучения Вы получите сертификат о прохождении курса и доступ <br>к закрытой рассылке трейдеров по аналитике и инсайтам.
+				</div>
+			</div>
+			<!-- /.advantages-container -->
+		</div>
+	</div>
+	<!-- /.advantages -->
+	
+	<div class="groups">
+		<div class="groups-text">
+			<div class="groups-text__title">
+				Набор группы уже идет
+			</div>
+			<div class="groups-text__subtitle">
+				Успейте забронировать место в группе!
+			</div>
+		</div>
+		<button class="groups-button button modal-open">Забронировать место!</button>
+	</div>
+	<!-- /.groups -->
+
+	<div class="reviews-container">
+		<div class="container">
+			<div class="reviews-title title">Отзывы наших учеников</div>
+			<div class="reviews">
+				<div class="reviews-block">
+					<div class="reviews-block__img">
+						<img src="img/reviews/client-1.png" alt="Клиент 1">
+					</div>
+					<div class="reviews-block__name">
+						<b>Ольга Фролова</b><br>
+						23 года. Москва
+					</div>
+					<div class="reviews-block__review">
+						<p>В общем учился сам и потихоньку сливал депозит. В начале июня я решил бросить эту затею и жить дальше спокойно, но мне позвонил Кирилл Р. и предложил беспроигрышный вариант. Сказал что договорился с фин. отделом и что мне дадут страховку на мой депозит на две недели, и что их аналитический отдел в курсе всех событий на две недели, и что можно заработать в три раза больше чем сумма на которую я пополнюсь.</p>
+						 <p>Я взял кредитную карту в банке и перевел все средства 300 000р брокеру. Две недели выполнял слово в слово указания аналитика Кирилла Р. в итоге у меня на счету 0. Мне восстановили средства, и я решил вывести их, но мне сказали что это деньги компании и что их нужно отрабатывать в 20-ти кратном размере</p>
+					</div>
+				</div>
+				<div class="reviews-block">
+					<div class="reviews-block__img">
+						<img src="img/reviews/client-2.png" alt="Клиент 2">
+					</div>
+					<div class="reviews-block__name">
+						<b>Татьяна Петрова</b><br>
+						29 лет. Нижний Новгород
+					</div>
+					<div class="reviews-block__review">
+						<p>В общем учился сам и потихоньку сливал депозит. В начале июня я решил бросить эту затею и жить дальше спокойно, но мне позвонил Кирилл Р. и предложил беспроигрышный вариант. Сказал что договорился с фин. отделом и что мне дадут страховку на мой депозит на две недели, и что их аналитический отдел в курсе всех событий на две недели, и что можно заработать в три раза больше чем сумма на которую я пополнюсь.</p>
+						 <p>Я взял кредитную карту в банке и перевел все средства 300 000р брокеру. Две недели выполнял слово в слово указания аналитика Кирилла Р. в итоге у меня на счету 0. Мне восстановили средства, и я решил вывести их, но мне сказали что это деньги компании и что их нужно отрабатывать в 20-ти кратном размере</p>
+					</div>
+				</div>
+				<div class="reviews-block">
+					<div class="reviews-block__img">
+						<img src="img/reviews/client-3.png" alt="Клиент 3">
+					</div>
+					<div class="reviews-block__name">
+						<b>Наталья Емельянова</b> <br>
+						19 лет. Самара
+					</div>
+					<div class="reviews-block__review">
+						<p>В общем учился сам и потихоньку сливал депозит. В начале июня я решил бросить эту затею и жить дальше спокойно, но мне позвонил Кирилл Р. и предложил беспроигрышный вариант. Сказал что договорился с фин. отделом и что мне дадут страховку на мой депозит на две недели, и что их аналитический отдел в курсе всех событий на две недели, и что можно заработать в три раза больше чем сумма на которую я пополнюсь.</p>
+						 <p>Я взял кредитную карту в банке и перевел все средства 300 000р брокеру. Две недели выполнял слово в слово указания аналитика Кирилла Р. в итоге у меня на счету 0. Мне восстановили средства, и я решил вывести их, но мне сказали что это деньги компании и что их нужно отрабатывать в 20-ти кратном размере</p>
+					</div>
+				</div>
+			</div>
+			<!-- ./reviews -->
+			<button class='reviews-button button modal-open send-review'>Оставить отзыв</button>
+		</div>
+	</div>
+	<!-- ./reviews-container -->
+
+	<div class="other-service-section">
+		<div class="container">
+			<div class="other-service__title title">Другие наши услуги</div>
+			<div class="other-service__blocks">
+				<div class="other-service__blocks-serv">
+					<div class="other-service__blocks-serv__img">
+						<img src="img/other-servise/investment.jpg" alt="Инвестиции">
+					</div>
+					<div class="other-service__blocks-serv__title">
+						<b>Инвестиции</b>
+					</div>
+					<div class="other-service__blocks-serv__descr">
+						Мы составим для Вас персональный
+						финансовый план по
+						инвестированию
+					</div>
+					<button class="other-service__blocks-serv__button button modal-open">Узнать</button>
+				</div>
+				<div class="other-service__blocks-serv">
+					<div class="other-service__blocks-serv__img">
+						<img src="img/other-servise/management.jpg" alt="Доверительное управление">
+					</div>
+					<div class="other-service__blocks-serv__title">
+						<b>Доверительное управление</b>
+					</div>
+					<div class="other-service__blocks-serv__descr">
+						Профессиональные трейдеры компании готовы управлять Вашими
+						финансами
+					</div>
+					<button class="other-service__blocks-serv__button button modal-open">Узнать</button>
+				</div>
+				<div class="other-service__blocks-serv">
+					<div class="other-service__blocks-serv__img">
+						<img src="img/other-servise/crypto.jpg" alt="Рынки криптовалюты">
+					</div>
+					<div class="other-service__blocks-serv__title">
+						<b>Рынки криптовалюты</b>
+					</div>
+					<div class="other-service__blocks-serv__descr">
+						Обучение торговли и управление
+						финансами и торговлей на рынках
+						криптовалюты и ICO
+					</div>
+					<button class="other-service__blocks-serv__button button modal-open">Узнать</button>
+				</div>
+			</div>
+			<!-- /.other-service__blocks -->
+		</div>
+	</div>
+	<!-- /.other-service-section -->
+	
+	<div class="form-section">
+		<div class="container">
+			<div class="form-container">
+				<div class="title form-container__title">
+					Остались вопросы?
+				</div>
+				<div class="form-container__subtitle">
+					Задайте их профессиональному трейдеру!
+				</div>
+				<div class="form-container__form">
+					<form action="mailer/smart.php" method="POST" >
+						<input name='user_name' type="text" class=" input input-name form-container__input" placeholder="Ваше имя" required>
+						<input name='user_phone' type="text" class=" input input-phone form-container__input" placeholder="Ваш номер телефона" required>
+						<button  type='submit' onclick="yaCounter50827047.reachGoal('callRqst',function () { }); return true;" class="form-container__button button ">Получить консультацию</button>
+					</form>
+				</div>
+			</div>
+			<!-- /.form-container -->
+		</div>
+	</div>
+	<!-- /.form-section -->
+
+	<div class="contacts-section">
+		<div class="container">
+			<div class="title">Где проходит обучение?</div>
+			<div class="contacts">
+				<div id='map' class="contacts-map">
+					<script>
+						ymaps.ready(function () {
+						    var myMap = new ymaps.Map('map', {
+						            center: [55.725676, 37.646848],
+						            zoom: 15
+						        }, {
+						            searchControlProvider: 'yandex#search'
+						        }),
+
+						        // Создаём макет содержимого.
+						        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+						            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+						        ),
+
+						        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+						            hintContent: 'Active Finance',
+						            balloonContent: 'Москва, улица Победы, 45'
+						        }, {
+						            // Опции.
+						            // Необходимо указать данный тип макета.
+						            iconLayout: 'default#image',
+						            // Своё изображение иконки метки.
+						            iconImageHref: 'img/contacts/pin.png',
+						            // Размеры метки.
+						            iconImageSize: [47, 47],
+						            // Смещение левого верхнего угла иконки относительно
+						            // её "ножки" (точки привязки).
+						            iconImageOffset: [-5, -38]
+						        })
+
+						    myMap.geoObjects
+						        .add(myPlacemark);
+						    myMap.behaviors.disable('scrollZoom');
+						});
+					</script>
+				</div>
+				<div class="contacts-descr">
+					<div class="contacts-descr__address">
+						<span class="contact-title">Адрес нашего тренинг центра</span>
+
+						<span class='icon'><img src="img/contacts/map-marker.png" alt='icon'></span>
+						<span class="address">Москва, улица Победы, 45</span>
+					</div>
+					<div class="contacts-descr__tel">
+						<span class="contact-title">Остались вопросы? Позвоните</span>
+
+						<span class='icon'><img src="img/contacts/layer-21-copy.png" alt='icon' ></span>
+						<span class="address"><a class="linkphone2"  href="tel:+75351111001">+7 535 111 10 01</a></span>
+					</div>
+					<div class="contacts-descr__text contact-title" >
+						Или оставьте заявку на звонок
+					</div>
+					<button onclick="newOrder" class="button contacts-descr__button modal-open">Заказать звонок</button>
+				</div>
+			</div>
+			<!-- /.contacts -->
+		</div>
+	</div>
+	<!-- /.contacts-section -->
+
+	<footer class="footer header ">
+		<div class="container">
+			<div class="header-head">
+	<div class="header-head__logo">
+		<div class="header-head__logo-img" >
+		</div>
+		<div class="header-head__logo-text">
+			Обучаем зарабатывать и инвестировать<br>
+			на финансовых рынках с минимумом риска
+		</div>
+	</div>
+	<div class="header-head__callback">
+		<div class="header-head__callback-numbers">
+			<span class='questions'>Есть вопросы?</span>
+			<span class='phone'><a class="linkphone" href="tel:+75351111001">+7 535 111 10 01</a></span>
+		</div>
+		<button class="header-head__callback-button button modal-open">Перезвоните мне!</button>
+	</div>
+</div>			<div class="footer-end">
+				© www.advice.ru 2008-2017. Все права защищены.
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<!-- анимация стрелки вниз в header -->
+	<script>
+		$(document).ready(function(){
+			var distance = 700
+			$(".down").on("click", function () {
+				$('body,html').animate({scrollTop: distance}, 1000);
+			});
+		});
+	</script>
+	<!-- модальное окно -->
+	<script>
+		$(document).ready(function(){
+		  $('.modal-open').on("click", function(){
+		    $('.modal').fadeIn(500)
+		  });
+
+		  $('.modal-close').on("click", function(){
+		    $('.modal').fadeOut(500)
+		    $('.modal-block__thanks').css("visibility", "hidden")
+		  });
+		});
+	</script>
+	<!-- СПАСИБО при отправке формы в модальном окне -->
+	<script>
+		$(document).ready(function(){
+		  $('.modal-block__form-button').on("submit", function(){
+		    $('.modal-block__thanks').css("visibility", "visible")
+		  });
+		});
+	</script>
+	
+	<!-- маски для INPUT -->
+	<script>
+	  $(document).ready(function(){
+	   $(".input-phone").mask("8(999) 999-9999");
+	  });
+	</script>
+	<!-- слайдер "отзывы" -->
+	<script>
+		$(document).ready(function(){
+		  $('.reviews').slick({
+		    slidesToShow: 1,
+		    slidesToScroll: 1,
+		    prevArrow: '<div class="slider-arrow slider-arrow-left"></div>',
+		    nextArrow: '<div class="slider-arrow slider-arrow-right"></div>',
+		    arrows: true
+		  });
+		});
+	</script>
+	<!-- увеличение сертификата при клике -->
+	<script>
+		$(document).ready(function(){
+			var speed=1000,
+				width=100,
+			    height=200,
+			    newHeight=500,
+			    newWidth=1000;
+
+			$('.small').on("click",function(){
+			    $('.sertificate').toggleClass('big');
+			    $('.sertificate').removeClass('small');
+			});
+			$('.big').on("click",function(){
+			    $('.sertificate').toggleClass('small');
+				$('.sertificate').removeClass('big');
+			});
+		});
+	</script>
+
+
+
+	
+</body>
+</html>
